@@ -1,7 +1,6 @@
-FROM elasticsearch:2.4.0
+FROM elasticsearch:5.1.1
 
-RUN bin/plugin install lmenezes/elasticsearch-kopf/v2.1.2
-RUN bin/plugin install io.fabric8/elasticsearch-cloud-kubernetes/2.4.0_01
+RUN bin/elasticsearch-plugin install io.fabric8:elasticsearch-cloud-kubernetes:5.1.1
 
 ENV BOOTSTRAP_MLOCKALL=false NODE_DATA=true NODE_MASTER=true JAVA_OPTS=-Djava.net.preferIPv4Stack=true
 
