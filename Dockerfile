@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 COPY pre-stop-hook.sh /pre-stop-hook.sh
 
-ADD elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
+COPY elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
