@@ -12,4 +12,5 @@ cloud:
     namespace: ${KUBERNETES_NAMESPACE}
 
 discovery:
-  type: kubernetes
+  zen: 
+    hosts_provider: kubernetes
